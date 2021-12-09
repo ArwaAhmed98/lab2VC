@@ -1,0 +1,4 @@
+git branch -d newBranch ( to remove a branch locally )
+git branch -D newBranch ( to rm branch locally that contains a files did not merged on another branch)
+--------------------
+git push origin :newbranch ( remove  a branch on the remote server )
