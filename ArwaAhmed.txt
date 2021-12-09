@@ -1,0 +1,14 @@
+mkdir lab2VC
+cd lab2VC
+git init
+touch ArwaAhmed.txt
+git add .
+git commit -m "FirstCommit"
+git branch -M main
+git status
+git branch
+git remote add origin sshlink
+git remote -v
+git push origin main
+:wq
+
