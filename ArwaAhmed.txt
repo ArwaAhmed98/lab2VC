@@ -10,5 +10,92 @@ git branch
 git remote add origin sshlink
 git remote -v
 git push origin main
+
 :wq
 
+
+
+$ git push origin dev
+Warning: Permanently added the ECDSA host key for IP address '140.82.114.4' to the list of known hosts.
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (3/3), 276 bytes | 276.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:ArwaAhmed98/lab2VC.git
+   70fd4a9..14ef441  dev -> dev
+[Arwa@EngArwaLaptop lab2VC]$ ls
+ArwaAhmed.txt  file2
+[Arwa@EngArwaLaptop lab2VC]$ git branch
+* dev
+  main
+  test
+[Arwa@EngArwaLaptop lab2VC]$ git add .
+[Arwa@EngArwaLaptop lab2VC]$ git commit
+On branch dev
+nothing to commit, working tree clean
+[Arwa@EngArwaLaptop lab2VC]$ git push origin dev
+Everything up-to-date
+[Arwa@EngArwaLaptop lab2VC]$ git checkout main
+Switched to branch 'main'
+[Arwa@EngArwaLaptop lab2VC]$ git merge main
+Already up to date.
+[Arwa@EngArwaLaptop lab2VC]$ git merge dev *****************************************************************
+Updating 70fd4a9..14ef441
+Fast-forward
+ file2 | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file2
+[Arwa@EngArwaLaptop lab2VC]$ git branch
+  dev
+* main
+  test
+[Arwa@EngArwaLaptop lab2VC]$ git add . 
+[Arwa@EngArwaLaptop lab2VC]$ git commit -m "third commit "
+On branch main
+nothing to commit, working tree clean
+[Arwa@EngArwaLaptop lab2VC]$ git push origin main
+Total 0 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:ArwaAhmed98/lab2VC.git
+   70fd4a9..14ef441  main -> main
+[Arwa@EngArwaLaptop lab2VC]$ git checkout dev
+Switched to branch 'dev'
+[Arwa@EngArwaLaptop lab2VC]$ touch file3
+[Arwa@EngArwaLaptop lab2VC]$ git add .
+[Arwa@EngArwaLaptop lab2VC]$ git commit -m "testforREBOSE"
+[dev 9acd675] testforREBOSE
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file3
+[Arwa@EngArwaLaptop lab2VC]$ git push origin dev
+Warning: Permanently added the ECDSA host key for IP address '140.82.121.3' to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 283 bytes | 283.00 KiB/s, done.
+Total 2 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:ArwaAhmed98/lab2VC.git
+   14ef441..9acd675  dev -> dev
+
+**************************************************REBOSE*************************************************
+[Arwa@EngArwaLaptop lab2VC]$ touch file4rebose
+[Arwa@EngArwaLaptop lab2VC]$ git add .
+[Arwa@EngArwaLaptop lab2VC]$ git commit -m "test4REBASE"
+[dev c2d99ce] test4REBASE
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 file4rebose
+[Arwa@EngArwaLaptop lab2VC]$ git checkout main
+Switched to branch 'main'
+[Arwa@EngArwaLaptop lab2VC]$ git rebase dev **************************************************************
+Successfully rebased and updated refs/heads/main.
+[Arwa@EngArwaLaptop lab2VC]$ git push origin main 
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (2/2), done.
+Writing objects: 100% (2/2), 264 bytes | 264.00 KiB/s, done.
+Total 2 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To github.com:ArwaAhmed98/lab2VC.git
+   14ef441..c2d99ce  main -> main
